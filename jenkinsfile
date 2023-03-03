@@ -1,12 +1,18 @@
 pipeline {
+
     agent any
+
     stages {
-        stage('git checkout') {
+
+        stage('git checkout'){
+
             steps {
-                git branch: 'main', url 'https://github.com/Avinashtalla/example-voting-app.git'
+                git branch: 'main', changelog: false, poll: false, url: 'https://github.com/Avinashtalla/Jenkins.git'
             }
+        
         }
         stage('Unit Testing') {
+            
             steps {
                 sh 'mvn test'
             }
