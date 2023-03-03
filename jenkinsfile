@@ -1,10 +1,10 @@
-pipeline {
+pipeline{
     agent any
-    stages{
-        stage('git checkout'){
-            steps{
-                git branch: 'main', url" 'https://github.com/Avinashtalla/example-voting-app.git'
+    stages {
+        stage('git checkout') {
+            steps {
+                git branch: 'main', url 'https://github.com/Avinashtalla/example-voting-app.git'
             }
         }
-            }
+    }
 }
