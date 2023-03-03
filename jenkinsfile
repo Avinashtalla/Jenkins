@@ -8,8 +8,8 @@ pipeline {
         }
         stage('Unit Testing') {
             steps {
-                cd example-voting-app.git/;
-                cd vote/;
+                cd example-voting-app.git/
+                cd vote/
                 sh 'mvn test'
             }
         }
